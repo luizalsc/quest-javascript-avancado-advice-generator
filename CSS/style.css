@@ -7,13 +7,14 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 2rem;
 }
 
 .container {
     padding: 4rem;
     background-color: var(--neutral-grayish-blue);
-    width: 54rem;
-    height: 32rem;
+    max-width: 54rem;
+    min-height: 32rem;
     border-radius: 1.5rem;
     position: relative;
 }
@@ -35,19 +36,19 @@ body {
     font-size: 2.8rem;
     text-align: center;
     padding: 2rem;
-    margin-bottom: 5rem;
+    margin-bottom: 3rem;
 }
 
 .container .line {
     align-self: center;
     width: 100%;
-    margin-bottom: 3rem;
 }
 
-.button {
+.container .button {
     position: absolute;
-    left: 24rem;
-    top: 29rem;
+    left: 50%;
+    top: 100%;
+    transform: translate(-50%, -50%);
     background-color: var(--primary-green);
     background-position: center;
     height: 6rem;
@@ -56,11 +57,29 @@ body {
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-}
+    transition: ease-in-out 0.1s;
+} 
 
-.glow {
+.container .button:hover {
     box-shadow: var(--primary-green) 0px 2px 60px 5px;
 }
 
+@media (max-width: 375px) {
+
+    .container {
+        width: 35rem;
+        min-height: 25rem;
+        padding: 3rem;
+    }
+
+    .container .title {
+        font-size: 1rem;
+    }
+
+    .container .quote {
+        font-size: 2.2rem;
+        margin-bottom: 1rem;
+    }
+}
 
     
